@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Repositories.css';
+import '../styles/Repositories.css';
 import { ReactComponent as RefreshIcon } from '../assets/icons/refresh.svg';
 import { ReactComponent as PlusIcon } from '../assets/icons/plus.svg';
 import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';

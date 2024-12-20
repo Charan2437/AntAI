@@ -1,5 +1,9 @@
 import React from 'react';
-import './AIMetricsCard.css';
+import '../styles/AIMetricsCard.css';
+import logoIcon from '../assets/icons/logo.png';
+import dividerIcon from '../assets/icons/divider.png';
+import chartIcon from '../assets/icons/chart.png';
+import growthIcon from '../assets/icons/growth.png';
 
 const AIMetricsCard = ({ 
   languageSupport = "30+",
@@ -13,10 +17,10 @@ const AIMetricsCard = ({
       <div className="metrics-card">
         <div className="header">
           <div className="logo">
-            <img src="https://dashboard.codeparrot.ai/api/assets/Z2ULZY6CYQNjI8CP" alt="AI Logo" />
+            <img src={logoIcon} alt="AI Logo" />
             <h2>AI to Detect & Autofix Bad Code</h2>
           </div>
-          <img src="https://dashboard.codeparrot.ai/api/assets/Z2ULZY6CYQNjI8CQ" alt="Divider" className="divider" />
+          <img src={dividerIcon} alt="Divider" className="divider" />
           <div className="stats-row">
             <div className="stat-item">
               <span className="stat-value">{languageSupport}</span>
@@ -36,14 +40,14 @@ const AIMetricsCard = ({
         <div className="issues-card">
           <div className="issues-content">
             <div className="chart-icon">
-              <img src="https://dashboard.codeparrot.ai/api/assets/Z2ULZo6CYQNjI8CR" alt="Chart" />
+              <img src={chartIcon} alt="Chart" />
             </div>
             <div className="issues-stats">
               <div className="issues-label">Issues Fixed</div>
               <div className="issues-value">{issuesFixed}</div>
             </div>
             <div className="growth-indicator">
-              <img src="https://dashboard.codeparrot.ai/api/assets/Z2ULZo6CYQNjI8CS" alt="Growth" />
+              <img src={growthIcon} alt="Growth" />
               <span className="growth-value">{weeklyGrowth}</span>
               <span className="growth-period">This week</span>
             </div>

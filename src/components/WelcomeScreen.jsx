@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './WelcomeScreen.css';
+import '../styles/WelcomeScreen.css';
 
 // Import icons from assets directory
 import GithubIcon from '../assets/icons/GitHub.png';
