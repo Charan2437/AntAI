@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 import './WelcomeScreen.css';
 
+// Import icons from assets directory
+import GithubIcon from '../assets/icons/GitHub.png';
+import BitbucketIcon from '../assets/icons/BitBucket.png';
+import AzureIcon from '../assets/icons/Azure.png';
+import GitlabIcon from '../assets/icons/GitLab.png';
+import CodeAntLogo from '../assets/logo.png';
+
 const WelcomeScreen = () => {
   const [activeTab, setActiveTab] = useState('SAAS');
 
   // Sign-in options for each tab
   const saasOptions = [
-    { provider: 'github', label: 'Sign in with Github', icon: 'https://dashboard.codeparrot.ai/api/assets/Z2UJMhEM3nUkN2xr' },
-    { provider: 'bitbucket', label: 'Sign in with Bitbucket', icon: 'https://dashboard.codeparrot.ai/api/assets/Z2UJMhEM3nUkN2xs' },
-    { provider: 'azure', label: 'Sign in with Azure Devops', icon: 'https://dashboard.codeparrot.ai/api/assets/Z2UJMhEM3nUkN2xt' },
-    { provider: 'gitlab', label: 'Sign in with GitLab', icon: 'https://dashboard.codeparrot.ai/api/assets/Z2UJMhEM3nUkN2xu' }
+    { provider: 'github', label: 'Sign in with Github', icon: GithubIcon },
+    { provider: 'bitbucket', label: 'Sign in with Bitbucket', icon: BitbucketIcon },
+    { provider: 'azure', label: 'Sign in with Azure Devops', icon: AzureIcon },
+    { provider: 'gitlab', label: 'Sign in with GitLab', icon: GitlabIcon }
   ];
 
   const selfHostedOptions = [
-    { provider: 'gitlab', label: 'Self Hosted GitLab', icon: 'https://dashboard.codeparrot.ai/api/assets/Z2UJMhEM3nUkN2xu' },
-    { provider: 'sso', label: 'Sign in with SSO', icon: 'https://dashboard.codeparrot.ai/api/assets/sso-icon.svg' }
+    { provider: 'gitlab', label: 'Self Hosted GitLab', icon: GitlabIcon },
+    { provider: 'sso', label: 'Sign in with SSO', icon: GithubIcon }
   ];
 
   const handleSignIn = (provider) => {
@@ -65,7 +72,7 @@ const WelcomeScreen = () => {
         <div className="welcome-card">
           <div className="content-section">
             <div className="logo-section">
-              <img src="https://dashboard.codeparrot.ai/api/assets/Z2UJMhEM3nUkN2xq" alt="CodeAnt Logo" className="logo" />
+              <img src={CodeAntLogo} alt="CodeAnt Logo" className="logo" />
             </div>
             
             <h1 className="welcome-title">Welcome to CodeAnt AI</h1>
